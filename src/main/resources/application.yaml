@@ -1,0 +1,81 @@
+#Fri Nov 15 10:10:20 UTC 2024
+
+flyway:
+  datasources:
+    default:
+      enabled: true
+
+micronaut:
+  server:
+    cors:
+      enabled: true
+      configurations:
+        allowed-origins: "*"
+        allowed-methods: "*"
+        allowed-headers: "*"
+        exposed-headers: "*"
+        allow-credentials: true
+    port: ${APP_PORT:8080}
+    context-path: /api/v1
+  application:
+    name: consultiq-member
+  router:
+    static-resources:
+      swagger-ui:
+        mapping: /swagger-ui/**
+        paths: classpath:META-INF/swagger/views/swagger-ui
+      swagger:
+        mapping: /swagger/**
+        paths: classpath:META-INF/swagger
+  security:
+    authentication: bearer
+    intercept-url-map:
+      - pattern: ${micronaut.server.context-path}/swagger-ui/**
+        access:
+          - isAnonymous()
+      - pattern: ${micronaut.server.context-path}/swagger/**
+        access:
+          - isAnonymous()
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: ${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}
+
+  logging:
+    level:
+      root: DEBUG
+      io:
+        micronaut:
+          security: DEBUG
+          email: DEBUG
+
+r2dbc:
+  datasources:
+    default:
+      url: ${DB_URL:`r2dbc:postgresql://localhost:5432/consultiq`}
+      username: ${DB_USERS:postgres}
+      password: ${DB_PASSWORDS:hello}
+      options:
+        driver: pool
+        protocol: postgres
+        initialSize: 5
+        maxSize: 50
+        schema: ${TENANT_SCHEMA:operator}
+      schema-generate: none
+      dialect: postgres
+
+email:
+  smtp:
+    host: "smtp.gmail.com"
+    port: "587"
+    username: ${JAVA_MAIL_EMAIL_USERNAME:`smudbhari85`}
+    password: ${JAVA_MAIL_EMAIL_PASSWORD:`hhirtevxxttrtgza`}
+    from: "amankhadkakaji@gmail.com"
+    properties:
+      auth: "true"
+      ehlo: "true"
+      ssl-enable: "false"
+      starttls-enable: "true"
+
