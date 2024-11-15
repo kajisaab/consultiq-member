@@ -1,11 +1,11 @@
-#Fri Nov 15 10:10:20 UTC 2024
-
-flyway:
-  datasources:
-    default:
-      enabled: true
-
 micronaut:
+  multitenancy:
+    tenantresolver:
+      token:
+        enabled: true
+  views:
+    default-extension: html
+    folder: views
   server:
     cors:
       enabled: true
@@ -15,20 +15,32 @@ micronaut:
         allowed-headers: "*"
         exposed-headers: "*"
         allow-credentials: true
-    port: ${APP_PORT:8080}
+    port: ${APP_PORT:9090}
     context-path: /api/v1
-  application:
-    name: consultiq-member
-  router:
-    static-resources:
-      swagger-ui:
-        mapping: /swagger-ui/**
-        paths: classpath:META-INF/swagger/views/swagger-ui
-      swagger:
-        mapping: /swagger/**
-        paths: classpath:META-INF/swagger
   security:
     authentication: bearer
+    token:
+      jwt:
+        signatures:
+          secret:
+            generator:
+              secret: ${JWT_GENERATOR_SIGNATURE_SECRET:df3d25e6b2209fe4867e4061b3a6797dfebf8425ed7da69bbc3c15035ee1e85a}
+              jws-algorithm: HS256
+              expiration: 600000  # Access token expiration in seconds (10 minutes)
+            validator:
+              secret: ${JWT_VALIDATOR_SIGNATURE_SECRET:df3d25e6b2209fe4867e4061b3a6797dfebf8425ed7da69bbc3c15035ee1e85a}
+              jws-algorithm: HS256
+              expiration: 30  # Refresh token expiration in days (30 days)
+    bearer:
+      header-name: Authorization  # Standard header for Authorization
+      prefix: 'Bearer '  # Bearer prefix for authorization header
+
+    redirect:
+      enabled: false
+    basic-auth:
+      enabled: false
+    reject-not-found: false
+
     intercept-url-map:
       - pattern: ${micronaut.server.context-path}/swagger-ui/**
         access:
@@ -36,12 +48,18 @@ micronaut:
       - pattern: ${micronaut.server.context-path}/swagger/**
         access:
           - isAnonymous()
-    token:
-      jwt:
-        signatures:
-          secret:
-            generator:
-              secret: ${JWT_GENERATOR_SIGNATURE_SECRET:pleaseChangeThisSecretForANewOne}
+
+  router:
+    static-resources:
+      swagger:
+        paths: "classpath:META-INF/swagger"
+        mapping: "/swagger/**"
+      openapi-explorer:
+        paths: "classpath:META-INF/swagger/views/openapi-explorer"
+        mapping: "/openapi-explorer/**"
+      swagger-ui:
+        paths: "classpath:META-INF/swagger/views/swagger-ui"
+        mapping: "/swagger-ui/**"
 
   logging:
     level:
@@ -51,20 +69,26 @@ micronaut:
           security: DEBUG
           email: DEBUG
 
+  application:
+    name: consultiq-member
+
 r2dbc:
   datasources:
     default:
       url: ${DB_URL:`r2dbc:postgresql://localhost:5432/consultiq`}
-      username: ${DB_USERS:postgres}
-      password: ${DB_PASSWORDS:hello}
+      username: ${DB_USERS:aman}
+      password: ${DB_PASSWORDS:root}
       options:
         driver: pool
         protocol: postgres
         initialSize: 5
         maxSize: 50
-        schema: ${TENANT_SCHEMA:operator}
       schema-generate: none
       dialect: postgres
+
+logger:
+  levels:
+    io.micronaut.data.query: DEBUG
 
 email:
   smtp:
@@ -78,4 +102,17 @@ email:
       ehlo: "true"
       ssl-enable: "false"
       starttls-enable: "true"
+# kafka (optional, uncomment and configure if Kafka is required)
 
+kafka:
+  health:
+    enabled: false
+# bootstrap:
+#   servers: ${KAFKA_BROKER_URL:http://localhost:9092}
+# enable: true
+# consumers:
+#   bootstrap:
+#     servers: ${KAFKA_BROKER_URL:http://localhost:9092}
+#     excel-processor-group:
+#       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#       value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer

@@ -45,6 +45,7 @@ dependencies {
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310"
     implementation("io.micronaut.data:micronaut-data-r2dbc")
     implementation("org.yaml:snakeyaml")
+    implementation("io.micronaut.multitenancy:micronaut-multitenancy")
 
     // Flyway migration
     implementation("io.micronaut.flyway:micronaut-flyway")

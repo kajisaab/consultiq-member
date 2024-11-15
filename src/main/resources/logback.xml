@@ -1,14 +1,43 @@
 <configuration>
 
-    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <!-- encoders are assigned the type
-             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+    <!-- Console Appender with colored output -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%cyan(%d{HH:mm:ss.SSS}) %gray([%thread]) %highlight(%-5level) %magenta(%logger{36}) - %msg%n</pattern>
+            <pattern>%date %highlight(%-5level) [%thread] %logger{10} [%file:%line] - %msg%n</pattern>
         </encoder>
     </appender>
 
-    <root level="info">
-        <appender-ref ref="STDOUT" />
+    <!-- File Appender (remains unchanged as files don't support colors) -->
+    <appender name="FILE" class="ch.qos.logback.core.FileAppender">
+        <file>logs/AppLogger.log</file>
+        <encoder>
+            <pattern>%date %level [%thread] %logger{10} [%file:%line] - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- For more specific color control, you can use this console appender instead -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%highlight(%date %-5level [%thread] %logger{10} [%file:%line] - %msg%n)</pattern>
+            <withJansi>true</withJansi>
+        </encoder>
+    </appender>
+
+    <!-- Your application's logs -->
+    <logger name="global.kajisaab" level="DEBUG" /> <!-- Replace with your actual package name -->
+    <logger name="global.kajisaab" level="INFO" /> <!-- Replace with your actual package name -->
+    <logger name="global.kajisaab.core.customAuthenticationProvider" level="ERROR"/>
+    <logger name="global.kajisaab.core.customAuthenticationProvider" level="INFO"/>
+
+    <!-- Suppress Logback internal logs -->
+    <logger name="ch.qos.logback" level="ERROR"/>
+    <logger name="ch.qos.logback.classic" level="ERROR"/>
+    <logger name="ch.qos.logback.core" level="ERROR"/>
+
+    <!-- Root Logger Configuration -->
+    <root level="ERROR">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
     </root>
+
 </configuration>
