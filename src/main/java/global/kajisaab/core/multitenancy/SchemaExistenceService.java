@@ -1,6 +1,8 @@
 package global.kajisaab.core.multitenancy;
 
 import jakarta.inject.Singleton;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,6 +15,8 @@ public class SchemaExistenceService {
     // Placeholder database connection manager
     private final DatabaseConnectionManager connectionManager;
 
+    private final Logger LOG = LoggerFactory.getLogger(SchemaExistenceService.class);
+
     public SchemaExistenceService(DatabaseConnectionManager connectionManager) {
         this.connectionManager = connectionManager;
     }
@@ -24,19 +28,24 @@ public class SchemaExistenceService {
             return databaseSchemaCheck(connection, tenantId);
         } catch (SQLException e) {
             // Log the exception (for debugging and error tracking)
-            System.err.println("Error checking schema existence: " + e.getMessage());
+            LOG.error("Error checking schema existence: {}", e.getMessage());
             return false;
         }
     }
 
     // Method to check if the schema exists in the database
     private boolean databaseSchemaCheck(Connection connection, String tenantId) throws SQLException {
-        String schemaCheckQuery = "SELECT schema_name FROM information_schema.schemata WHERE schema_name = ?";
+        String schemaName = "consultancy_" + tenantId;
+        // Modified query to be more explicit
+        String schemaCheckQuery =
+                "SELECT EXISTS (SELECT 1 FROM information_schema.schemata WHERE schema_name = ?)";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(schemaCheckQuery)) {
-            preparedStatement.setString(1, "consultancy_" + tenantId); // The tenant-specific schema name
+            preparedStatement.setString(1, schemaName);
+
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                return resultSet.next(); // If a row is returned, the schema exists
+                // The EXISTS query will always return one row with a boolean value
+                return resultSet.next() && resultSet.getBoolean(1);
             }
         }
     }

@@ -1,5 +1,6 @@
 package global.kajisaab.core.multitenancy;
 
+import global.kajisaab.core.jwtService.JwtService;
 import io.micronaut.context.annotation.Primary;
 import io.micronaut.context.annotation.Requirements;
 import io.micronaut.context.annotation.Requires;
@@ -9,9 +10,11 @@ import io.micronaut.http.HttpRequest;
 import io.micronaut.http.context.ServerRequestContext;
 import io.micronaut.multitenancy.exceptions.TenantNotFoundException;
 import io.micronaut.security.authentication.Authentication;
+import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 
 import java.io.Serializable;
+import java.util.Map;
 import java.util.Optional;
 
 @Singleton
@@ -22,6 +25,13 @@ import java.util.Optional;
         defaultValue = "false"
 ))
 public class TokenBasedMultiTenancyHandler implements TenantResolver {
+
+    private final JwtService jwtService;
+
+    @Inject
+    public TokenBasedMultiTenancyHandler(JwtService jwtService) {
+        this.jwtService = jwtService;
+    }
 
     @Override
     public @NonNull Serializable resolveTenantIdentifier() throws TenantNotFoundException {
@@ -46,9 +56,21 @@ public class TokenBasedMultiTenancyHandler implements TenantResolver {
                 .map(Authentication.class::cast);
 
         if (authentication.isPresent()) {
-            Object tenantId = authentication.get().getAttributes().get("schema");
+            Object tenantId = authentication.get().getAttributes().get("tenantId");
             if (tenantId != null) {
                 return tenantId.toString();
+            }
+        }
+
+        if (currentRequest.isPresent()) {
+            String authHeader = currentRequest.get().getHeaders().get("Authorization");
+            if (authHeader != null && authHeader.startsWith("Bearer ")) {
+                String token = authHeader.substring(7); // Remove "Bearer " prefix
+
+                Map<String, Object> claims = this.jwtService.parseToken(token);
+
+                return (String) claims.get("tenantId");
+                // You can now use this token as needed
             }
         }
 

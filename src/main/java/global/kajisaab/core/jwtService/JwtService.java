@@ -65,8 +65,8 @@ public class JwtService {
 
         Map<String, Object> claims = Map.of(
                 "userEmail", userDetails.getEmail(),
-                "tenantId", schema,
-                "schema", tenantId,
+                "schema", schema,
+                "tenantId", tenantId,
                 "tokenType", TokenTypeEnum.ACCESS_TOKEN.name(),
                 "exp", exp
         );
@@ -97,9 +97,9 @@ public class JwtService {
 
         Map<String, Object> refreshTokenClaims = Map.of(
                 "userEmail", userDetails.getEmail(),
-                "tenantId", schema,
-                "schema", tenantId,
-                "tokenType", TokenTypeEnum.ACCESS_TOKEN.name(),
+                "schema", schema,
+                "tenantId", tenantId,
+                "tokenType", TokenTypeEnum.REFRESH_TOKEN.name(),
                 "exp", exp
         );
         try {

@@ -83,12 +83,11 @@ class CustomAuthenticationProvider<B> implements TokenValidator<B> {
 
         return userDetailsRepository.findByEmail(email)
                 .switchIfEmpty(Mono.error(new UnauthorizedException("User not found")))
-                .handle((userDetails, sink) -> {
+                .flatMap((userDetails) -> {
                     if (DateUtils.isBeforeNow((Long) claims.get("exp"))) {
-                        sink.error(new UnauthorizedException("Token Expired"));
-                        return;
+                        return Mono.error(new UnauthorizedException("Refresh Token Expired"));
                     }
-                    sink.next(prepareAuthenticationResponse(claims, userDetails));
+                    return Mono.just(prepareAuthenticationResponse(claims, userDetails));
                 });
     }
 
@@ -100,9 +99,10 @@ class CustomAuthenticationProvider<B> implements TokenValidator<B> {
 
         parsedTokenClaims.put("token", claims.get("tokenType"));
         parsedTokenClaims.put("userDetails", userDetails);
+        parsedTokenClaims.put("tenantId", claims.get("tenantId"));
 
         userDetails.getRoles().forEach(role -> roles.add(role.label()));
 
-        return Authentication.build(userDetails.toString(), roles, parsedTokenClaims);
+        return Authentication.build(userDetails.getEmail(), roles, parsedTokenClaims);
     }
 }

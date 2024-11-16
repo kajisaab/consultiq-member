@@ -1417,3 +1417,289 @@ Caused by: io.micronaut.context.exceptions.NoSuchBeanException: No bean of type 
 Total heap size: 59768832 bytes
 Maximum heap size: 2147483648 bytes
 Free memory: 15681608 bytes
+2024-11-16 21:09:38,970 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 68157440 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 32058824 bytes
+2024-11-16 21:12:36,639 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 11186880 bytes
+2024-11-16 21:13:38,039 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 59768832 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 14161920 bytes
+2024-11-16 21:19:37,056 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 11217304 bytes
+2024-11-16 21:22:29,957 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 11766992 bytes
+2024-11-16 21:24:50,733 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 10863392 bytes
+2024-11-16 21:25:01,674 ERROR [default-nioEventLoopGroup-1-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+io.micronaut.context.exceptions.BeanInstantiationException: Error instantiating bean of type  [global.kajisaab.core.multitenancy.SchemaExistenceService]
+
+Message: PostgreSQL JDBC Driver not found
+Path Taken: new DefaultR2dbcRepositoryOperations(String dataSourceName,ConnectionFactory connectionFactory,DateTimeProvider<Object T> dateTimeProvider,RuntimeEntityRegistry runtimeEntityRegistry,ApplicationContext applicationContext,ExecutorService executorService,DataConversionService conversionService,AttributeConverterRegistry attributeConverterRegistry,SchemaTenantResolver schemaTenantResolver,R2dbcSchemaHandler schemaHandler,DataR2dbcConfiguration configuration,JsonMapper jsonMapper,SqlJsonColumnMapperProvider<Row S> sqlJsonColumnMapperProvider,List<R2dbcExceptionMapper E> r2dbcExceptionMapperList,R2dbcReactorTransactionOperations transactionOperations,ReactorConnectionOperations<Connection C> connectionOperations) --> new DefaultR2dbcRepositoryOperations(String dataSourceName,ConnectionFactory connectionFactory,DateTimeProvider<Object T> dateTimeProvider,RuntimeEntityRegistry runtimeEntityRegistry,ApplicationContext applicationContext,ExecutorService executorService,DataConversionService conversionService,AttributeConverterRegistry attributeConverterRegistry,SchemaTenantResolver schemaTenantResolver,R2dbcSchemaHandler schemaHandler,DataR2dbcConfiguration configuration,JsonMapper jsonMapper,SqlJsonColumnMapperProvider<Row S> sqlJsonColumnMapperProvider,List<R2dbcExceptionMapper E> r2dbcExceptionMapperList,[R2dbcReactorTransactionOperations transactionOperations],ReactorConnectionOperations<Connection C> connectionOperations) --> new DefaultR2dbcReactorTransactionOperations(String dataSourceName,[DefaultR2dbcReactorConnectionOperations connectionOperations]) --> new DefaultR2dbcReactorConnectionOperations(String dataSourceName,ConnectionFactory connectionFactory,DataR2dbcConfiguration configuration,[SchemaTenantResolver schemaTenantResolver],R2dbcSchemaHandler schemaHandler) --> new SchemaBasedDataSourceResolver(TokenBasedMultiTenancyHandler tokenBasedMultiTenancyHandler,[SchemaExistenceService schemaExistenceService]) --> new SchemaExistenceService([DatabaseConnectionManager connectionManager])
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2349)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2304)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2316)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3127)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:3029)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2990)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2756)
+	at io.micronaut.context.DefaultBeanContext.getBean(DefaultBeanContext.java:1745)
+	at io.micronaut.context.AbstractBeanResolutionContext.getBean(AbstractBeanResolutionContext.java:89)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.resolveBean(AbstractInitializableBeanDefinition.java:2188)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.getBeanForConstructorArgument(AbstractInitializableBeanDefinition.java:1350)
+	at global.kajisaab.core.multitenancy.$SchemaExistenceService$Definition.instantiate(Unknown Source)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2304)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2316)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3127)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:3029)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2990)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2756)
+	at io.micronaut.context.DefaultBeanContext.getBean(DefaultBeanContext.java:1745)
+	at io.micronaut.context.AbstractBeanResolutionContext.getBean(AbstractBeanResolutionContext.java:89)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.resolveBean(AbstractInitializableBeanDefinition.java:2188)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.getBeanForConstructorArgument(AbstractInitializableBeanDefinition.java:1350)
+	at global.kajisaab.core.multitenancy.$SchemaBasedDataSourceResolver$Definition.instantiate(Unknown Source)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2304)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2316)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3127)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:3029)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2990)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2756)
+	at io.micronaut.context.DefaultBeanContext.findBean(DefaultBeanContext.java:1808)
+	at io.micronaut.context.AbstractBeanResolutionContext.findBean(AbstractBeanResolutionContext.java:112)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.resolveBean(AbstractInitializableBeanDefinition.java:2186)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.getBeanForConstructorArgument(AbstractInitializableBeanDefinition.java:1350)
+	at io.micronaut.data.r2dbc.connection.$DefaultR2dbcReactorConnectionOperations$Definition.doInstantiate(Unknown Source)
+	at io.micronaut.context.AbstractInitializableBeanDefinition.instantiate(AbstractInitializableBeanDefinition.java:770)
+	at io.micronaut.context.BeanDefinitionDelegate.instantiate(BeanDefinitionDelegate.java:167)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2304)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2316)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3127)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:3029)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2990)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2756)
+	at io.micronaut.context.DefaultBeanContext.findBean(DefaultBeanContext.java:1808)
+	at io.micronaut.context.BeanDefinitionDelegate.getParametersValues(BeanDefinitionDelegate.java:228)
+	at io.micronaut.context.BeanDefinitionDelegate.instantiate(BeanDefinitionDelegate.java:166)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2304)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2316)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3127)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:3029)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2990)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2756)
+	at io.micronaut.context.DefaultBeanContext.findBean(DefaultBeanContext.java:1808)
+	at io.micronaut.context.BeanDefinitionDelegate.getParametersValues(BeanDefinitionDelegate.java:228)
+	at io.micronaut.context.BeanDefinitionDelegate.instantiate(BeanDefinitionDelegate.java:166)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2304)
+	at io.micronaut.context.DefaultBeanContext.doCreateBean(DefaultBeanContext.java:2316)
+	at io.micronaut.context.DefaultBeanContext.createRegistration(DefaultBeanContext.java:3127)
+	at io.micronaut.context.SingletonScope.getOrCreate(SingletonScope.java:80)
+	at io.micronaut.context.DefaultBeanContext.findOrCreateSingletonBeanRegistration(DefaultBeanContext.java:3029)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2990)
+	at io.micronaut.context.DefaultBeanContext.resolveBeanRegistration(DefaultBeanContext.java:2756)
+	at io.micronaut.context.DefaultBeanContext.getBean(DefaultBeanContext.java:1745)
+	at io.micronaut.context.DefaultBeanContext.getBean(DefaultBeanContext.java:842)
+	at io.micronaut.context.DefaultBeanContext.getBean(DefaultBeanContext.java:834)
+	at io.micronaut.data.runtime.operations.DefaultRepositoryOperationsRegistry.provide(DefaultRepositoryOperationsRegistry.java:53)
+	at io.micronaut.data.runtime.intercept.DataInterceptorResolver.findInterceptor(DataInterceptorResolver.java:122)
+	at io.micronaut.data.runtime.intercept.DataInterceptorResolver.findDataInterceptor(DataInterceptorResolver.java:104)
+	at io.micronaut.data.runtime.intercept.DataInterceptorResolver.resolve(DataInterceptorResolver.java:77)
+	at io.micronaut.data.runtime.intercept.DataIntroductionAdvice.intercept(DataIntroductionAdvice.java:75)
+	at io.micronaut.aop.chain.MethodInterceptorChain.proceed(MethodInterceptorChain.java:143)
+	at global.kajisaab.feature.auth.repository.UserDetailsRepository$Intercepted.findByEmail(Unknown Source)
+	at global.kajisaab.feature.auth.usecase.LoginUseCase.findUserByEmail(LoginUseCase.java:63)
+	at global.kajisaab.feature.auth.usecase.LoginUseCase.execute(LoginUseCase.java:51)
+	at global.kajisaab.feature.auth.controller.AuthController.login(AuthController.java:39)
+	at global.kajisaab.feature.auth.controller.$AuthController$Definition$Exec.dispatch(Unknown Source)
+	at io.micronaut.context.AbstractExecutableMethodsDefinition$DispatchedExecutableMethod.invokeUnsafe(AbstractExecutableMethodsDefinition.java:461)
+	at io.micronaut.context.DefaultBeanContext$BeanContextUnsafeExecutionHandle.invokeUnsafe(DefaultBeanContext.java:4354)
+	at io.micronaut.web.router.AbstractRouteMatch.execute(AbstractRouteMatch.java:272)
+	at io.micronaut.web.router.DefaultUriRouteMatch.execute(DefaultUriRouteMatch.java:38)
+	at io.micronaut.http.server.RouteExecutor.executeRouteAndConvertBody(RouteExecutor.java:488)
+	at io.micronaut.http.server.RouteExecutor.callRoute(RouteExecutor.java:476)
+	at io.micronaut.http.server.RequestLifecycle.callRoute(RequestLifecycle.java:182)
+	at io.micronaut.http.server.RequestLifecycle.executeRoute(RequestLifecycle.java:170)
+	at io.micronaut.http.server.RequestLifecycle$2.provideResponse(RequestLifecycle.java:390)
+	at io.micronaut.http.filter.FilterRunner.provideResponseAndHandleErrors(FilterRunner.java:372)
+	at io.micronaut.http.filter.FilterRunner.filterRequest(FilterRunner.java:307)
+	at io.micronaut.http.filter.FilterRunner.lambda$filterRequest$2(FilterRunner.java:280)
+	at io.micronaut.http.filter.AroundLegacyFilter$FilterChainImpl.proceed(AroundLegacyFilter.java:122)
+	at io.micronaut.views.ViewsFilter.doFilter(ViewsFilter.java:141)
+	at io.micronaut.http.filter.HttpServerFilter.doFilter(HttpServerFilter.java:48)
+	at io.micronaut.http.filter.AroundLegacyFilter.processRequestFilter(AroundLegacyFilter.java:75)
+	at io.micronaut.http.filter.FilterRunner.filterRequest(FilterRunner.java:276)
+	at io.micronaut.http.filter.FilterRunner.lambda$filterRequest$2(FilterRunner.java:280)
+	at io.micronaut.http.filter.AroundLegacyFilter$FilterChainImpl.proceed(AroundLegacyFilter.java:122)
+	at io.micronaut.security.filters.SecurityFilter.lambda$checkRules$7(SecurityFilter.java:164)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onNext(MonoFlatMapMany.java:163)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerNext(FluxConcatMapNoPrefetch.java:259)
+	at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onNext(FluxConcatMap.java:865)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onNext(MonoPeekTerminal.java:180)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onNext(FluxFilterFuseable.java:337)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.request(FluxFilterFuseable.java:411)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.set(Operators.java:2367)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onSubscribe(Operators.java:2241)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onSubscribe(MonoPeekTerminal.java:152)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onSubscribe(FluxFilterFuseable.java:305)
+	at reactor.core.publisher.MonoJust.subscribe(MonoJust.java:55)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:207)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:335)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerComplete(FluxConcatMapNoPrefetch.java:275)
+	at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onComplete(FluxConcatMap.java:889)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.onComplete(FluxFilterFuseable.java:391)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2573)
+	at reactor.core.publisher.FluxFilterFuseable$FilterFuseableConditionalSubscriber.request(FluxFilterFuseable.java:411)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.request(MonoPeekTerminal.java:139)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.request(Operators.java:2331)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:339)
+	at reactor.core.publisher.MonoNext$NextSubscriber.request(MonoNext.java:108)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onSubscribe(MonoFlatMapMany.java:141)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onSubscribe(MonoNext.java:70)
+	at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onSubscribe(FluxConcatMapNoPrefetch.java:164)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.InternalFluxOperator.subscribe(InternalFluxOperator.java:68)
+	at reactor.core.publisher.FluxDefer.subscribe(FluxDefer.java:54)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onComplete(FluxSwitchIfEmpty.java:82)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onComplete(MonoFlatMap.java:189)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onComplete(MonoNext.java:102)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.slowPath(FluxIterable.java:357)
+	at reactor.core.publisher.FluxIterable$IterableSubscription.request(FluxIterable.java:294)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onSubscribe(FluxFlatMap.java:373)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:201)
+	at reactor.core.publisher.FluxIterable.subscribe(FluxIterable.java:83)
+	at reactor.core.publisher.Mono.subscribe(Mono.java:4576)
+	at io.micronaut.core.async.propagation.ReactivePropagation$1.subscribe(ReactivePropagation.java:55)
+	at io.micronaut.core.async.propagation.ReactivePropagation$1.subscribe(ReactivePropagation.java:62)
+	at reactor.core.publisher.MonoFromPublisher.subscribe(MonoFromPublisher.java:64)
+	at reactor.core.publisher.MonoContextWriteRestoringThreadLocals.subscribe(MonoContextWriteRestoringThreadLocals.java:44)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:76)
+	at io.micronaut.http.reactive.execution.ReactorExecutionFlowImpl.onComplete(ReactorExecutionFlowImpl.java:89)
+	at io.micronaut.http.server.netty.NettyRequestLifecycle.handleNormal(NettyRequestLifecycle.java:107)
+	at io.micronaut.http.server.netty.RoutingInBoundHandler.accept(RoutingInBoundHandler.java:236)
+	at io.micronaut.http.server.netty.handler.PipeliningServerHandler$OptimisticBufferingInboundHandler.read(PipeliningServerHandler.java:481)
+	at io.micronaut.http.server.netty.handler.PipeliningServerHandler.channelRead(PipeliningServerHandler.java:218)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.CombinedChannelDuplexHandler$DelegatingChannelHandlerContext.fireChannelRead(CombinedChannelDuplexHandler.java:436)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.CombinedChannelDuplexHandler.channelRead(CombinedChannelDuplexHandler.java:251)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.timeout.IdleStateHandler.channelRead(IdleStateHandler.java:289)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+Caused by: java.lang.RuntimeException: PostgreSQL JDBC Driver not found
+	at global.kajisaab.core.multitenancy.DatabaseConnectionManager.<init>(DatabaseConnectionManager.java:33)
+	at global.kajisaab.core.multitenancy.$DatabaseConnectionManager$Definition.instantiate(Unknown Source)
+	at io.micronaut.context.DefaultBeanContext.resolveByBeanFactory(DefaultBeanContext.java:2334)
+	... 190 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.postgresql.Driver
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:413)
+	at java.base/java.lang.Class.forName(Class.java:404)
+	at global.kajisaab.core.multitenancy.DatabaseConnectionManager.<init>(DatabaseConnectionManager.java:31)
+	... 192 common frames omitted
+2024-11-16 21:27:14,946 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 35798928 bytes
+2024-11-16 21:28:40,891 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 36660160 bytes
+2024-11-16 21:28:43,306 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-11-16 21:28:43,339 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-11-16 21:28:43,377 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-11-16 21:29:36,023 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 59768832 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 15903040 bytes
+2024-11-16 21:30:16,192 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 34621208 bytes
+2024-11-16 21:31:07,645 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 10411488 bytes
+2024-11-16 21:32:36,350 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 10611512 bytes
+2024-11-16 21:33:09,115 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 10637992 bytes
+2024-11-16 21:34:10,324 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 59768832 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 15558584 bytes
+2024-11-16 21:34:15,532 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-11-16 21:34:24,345 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-11-16 21:34:24,360 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-11-16 21:34:24,389 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-11-16 21:42:16,787 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 56623104 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 10462672 bytes
+2024-11-16 21:47:35,198 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 59768832 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 14513136 bytes
+2024-11-16 21:49:38,505 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 59768832 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 14395112 bytes
+2024-11-16 21:49:40,706 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
