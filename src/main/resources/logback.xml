@@ -29,10 +29,10 @@
     <logger name="global.kajisaab.core.customAuthenticationProvider" level="ERROR"/>
     <logger name="global.kajisaab.core.customAuthenticationProvider" level="INFO"/>
 
-    <!-- Suppress Logback internal logs -->
-    <logger name="ch.qos.logback" level="ERROR"/>
-    <logger name="ch.qos.logback.classic" level="ERROR"/>
-    <logger name="ch.qos.logback.core" level="ERROR"/>
+<!--    &lt;!&ndash; Suppress Logback internal logs &ndash;&gt;-->
+<!--    <logger name="ch.qos.logback" level="ERROR"/>-->
+<!--    <logger name="ch.qos.logback.classic" level="ERROR"/>-->
+<!--    <logger name="ch.qos.logback.core" level="ERROR"/>-->
 
     <!-- Root Logger Configuration -->
     <root level="ERROR">

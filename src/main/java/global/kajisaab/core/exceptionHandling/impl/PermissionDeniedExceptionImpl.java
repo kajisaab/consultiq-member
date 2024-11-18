@@ -21,7 +21,7 @@ public class PermissionDeniedExceptionImpl implements ExceptionHandler<Permissio
     public HttpResponse<?> handle(HttpRequest request, PermissionDeniedException exception) {
         HttpStatus badRequest = HttpStatus.FORBIDDEN;
 
-        Object responseMessageObject = new GenerateMessageObject("Sorry you don't have permission to access this resource!");
+        Object responseMessageObject = new GenerateMessageObject(exception.getMessage());
 
         return ResponseHandler.responseBuilder("Forbidden", badRequest, responseMessageObject, "-1");
     }

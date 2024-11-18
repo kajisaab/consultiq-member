@@ -74,6 +74,7 @@ public class TokenBasedMultiTenancyHandler implements TenantResolver {
             }
         }
 
-        throw new TenantNotFoundException("Tenant ID not found in authentication or TenantContext");
+        return TenantContext.getCurrentTenant();
+
     }
 }

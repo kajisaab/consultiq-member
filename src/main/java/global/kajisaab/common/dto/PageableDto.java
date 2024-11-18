@@ -1,4 +1,4 @@
-package global.kajisaab.feature.consultancy.dto;
+package global.kajisaab.common.dto;
 
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.serde.annotation.Serdeable;
@@ -7,5 +7,10 @@ import io.soabase.recordbuilder.core.RecordBuilder;
 @Serdeable
 @Introspected
 @RecordBuilder
-public record ConsultancySchemaGeneratorDto(String makerName, String makerEmail, String password, String hashedPassword, String generatedSalt) {
+public record PageableDto(
+        Integer currentPage,
+        Integer pageSize,
+        Long totalPages
+) {
+
 }

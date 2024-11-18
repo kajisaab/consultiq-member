@@ -19,6 +19,8 @@ public class Roles extends DbEntity {
     @Column(name = "permissions")
     private List<String> permissions;
 
+    private String status;
+
     private Boolean active;
 
     public String getTitle() {
@@ -35,6 +37,14 @@ public class Roles extends DbEntity {
 
     public void setPermissions(List<String> permissions) {
         this.permissions = permissions;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public Boolean getActive() {

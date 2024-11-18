@@ -3,6 +3,7 @@ package global.kajisaab.core.permissionMiddleware.impl;
 import global.kajisaab.common.constants.AppConstant;
 import global.kajisaab.common.constants.PermissionConstant;
 import global.kajisaab.core.exceptionHandling.PermissionDeniedException;
+import global.kajisaab.core.multitenancy.TenantContext;
 import global.kajisaab.core.permissionMiddleware.PermissionMiddleware;
 import global.kajisaab.feature.auth.entity.UserDetailsEntity;
 import io.micronaut.http.HttpRequest;
@@ -30,56 +31,54 @@ public class PermissionMiddlewareImpl implements PermissionMiddleware {
     }
 
     @Override
-    public Mono<Void> validateAuthorization(UserDetailsEntity user, String route) throws PermissionDeniedException {
+    public Mono<Void> validateAuthorization(UserDetailsEntity user, String route, HttpRequest<?> currentRequest, String tenantId) throws PermissionDeniedException {
 
-        Optional<HttpRequest<Object>> currentRequest = ServerRequestContext.currentRequest();
 
-        if(currentRequest.isPresent()){
+        String requestUrl = currentRequest.getUri().toString();
 
-            String requestUrl = currentRequest.get().getUri().toString();
+        boolean isExcludedRoute = AppConstant.PUBLIC_ROUTE.stream().anyMatch(requestUrl::contains);
 
-            boolean isExcludedRoute = AppConstant.PUBLIC_ROUTE.stream().anyMatch(requestUrl::contains);
+        TenantContext.setCurrentTenant(tenantId);
 
-            if (!isExcludedRoute) {
+        if (!isExcludedRoute) {
 
-                String method = currentRequest.get().getMethodName();
-                String originalUrl = requestUrl.replaceAll("^(\\/)?v1|\\/$", "");
-                List<String> urlPermissions = PermissionConstant.getPermissionsByEndpointAndMethod(originalUrl, method);
+            String method = currentRequest.getMethodName();
+            String originalUrl = requestUrl.replaceAll("^(\\/)?v1|\\/$", "");
+            List<String> urlPermissions = PermissionConstant.getPermissionsByEndpointAndMethod(originalUrl, method);
 
-                List<String> userRoles = new ArrayList<>();
+            List<String> userRoles = new ArrayList<>();
 
-                user.getRoles().forEach(role -> {
-                    userRoles.add(role.value());
-                });
+            user.getRoles().forEach(role -> {
+                userRoles.add(role.value());
+            });
 
-                boolean authorized = true;
+            boolean authorized = true;
 
-                // Check if the endpoint and method are valid
-                authorized = PermissionConstant.isValidPermissionForEndpointAndMethod(originalUrl, method);
-                LOG.info("Inside the permission middleware: {}", authorized);
+            // Check if the endpoint and method are valid
+            authorized = PermissionConstant.isValidPermissionForEndpointAndMethod(originalUrl, method);
+            LOG.info("Inside the permission middleware: {}", authorized);
 
-                // Check if URL permissions are valid
-                if (urlPermissions != null && !urlPermissions.isEmpty() && authorized) {
-                    try {
-                        // Asynchronously validate permissions
-                        return this.permissionMiddlewareServiceImpl.validatePermission(userRoles, urlPermissions)
-                                .flatMap(permissionValid -> {
-                                    if (!permissionValid) {
-                                        return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
-                                    }
-                                    return Mono.empty();
-                                });
-                    } catch (Exception e) {
-                        LOG.error("Authorization error: {}", e.getMessage());
-                        return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
-                    }
+            // Check if URL permissions are valid
+            if (urlPermissions != null && !urlPermissions.isEmpty() && authorized) {
+                try {
+                    // Asynchronously validate permissions
+                    return this.permissionMiddlewareServiceImpl.validatePermission(userRoles, urlPermissions)
+                            .flatMap(permissionValid -> {
+                                if (!permissionValid) {
+                                    return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
+                                }
+                                return Mono.empty();
+                            });
+                } catch (Exception e) {
+                    LOG.error("Authorization error: {}", e.getMessage());
+                    return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
                 }
             }
         }
 
-        throw new PermissionDeniedException("Invalid Request");
-
-
+        return Mono.empty();
 
     }
+
+    ;
 }

@@ -17,6 +17,7 @@ micronaut:
         allow-credentials: true
     port: ${APP_PORT:9090}
     context-path: /api/v1
+    request-context: true
   security:
     authentication: bearer
     token:

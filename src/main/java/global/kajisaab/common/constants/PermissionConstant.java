@@ -10,7 +10,7 @@ public enum PermissionConstant {
     REFRESH_TOKEN("/api/v1/auth/refresh-token", "GET", Collections.emptyList()),
     DASHBOARD_CARD("/api/v1/dashboard/cards", "GET", Collections.singletonList("dashboard:cards")),
     INDIVIDUAL_ROLE_DETAIL("/api/v1/roles/detail/:id", "GET", Collections.singletonList("roles:detail")),
-    ROLE_LIST("/api/v1/roles/list", "POST", Collections.singletonList("roles:list"));
+    ROLE_LIST("/api/v1/role/list", "POST", Collections.singletonList("roles:list"));
 //    DASHBOARD_TRANSACTIONS_BAR_COUNT("/dashboard-reports/transactions-bar/count/:period", "GET", Collections.singletonList("dashboard:transactionGraph")),
 
     private final String endpoint;
