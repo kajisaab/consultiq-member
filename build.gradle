@@ -48,6 +48,9 @@ dependencies {
     implementation("io.micronaut.multitenancy:micronaut-multitenancy")
     implementation 'org.postgresql:postgresql:42.6.0'
     implementation "io.micronaut.reactor:micronaut-reactor"
+    implementation("io.micronaut.grpc:micronaut-grpc-server-runtime")
+    implementation("io.micronaut.grpc:micronaut-grpc-client-runtime")
+
 
     // Flyway migration
     implementation("io.micronaut.flyway:micronaut-flyway")
