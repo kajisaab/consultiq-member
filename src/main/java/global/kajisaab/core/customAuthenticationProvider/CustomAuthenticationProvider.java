@@ -63,24 +63,23 @@ class CustomAuthenticationProvider<B> implements TokenValidator<B> {
 
             throw new BadRequestException("Invalid Token " + e.getMessage());
         }
-    }
-
-    ;
+    };
 
     private Mono<Authentication> validateAccessToken(Map<String, Object> claims, HttpRequest<?> currentRequest) {
         // Defer to run the permission validation asynchronously
         String email = (String) claims.get("userEmail");
         return userDetailsRepository.findByEmail(email)
                 .switchIfEmpty(Mono.error(new UnauthorizedException("User not found")))
-                .flatMap(userDetails -> permissionMiddleware.validateAuthorization(userDetails, "", currentRequest,(String) claims.get("tenantId"))
+                .flatMap(userDetails -> permissionMiddleware.validateAuthorization(userDetails, currentRequest,(String) claims.get("tenantId"))
                         .onErrorMap(PermissionDeniedException.class, e -> new UnauthorizedException("Permission Denied"))
-                        .then(Mono.defer(() -> {
-                            // This will only run after permission validation succeeds
-                            if (DateUtils.isBeforeNow((Long) claims.get("exp"))) {
-                                return Mono.error(new UnauthorizedException("Token Expired"));
-                            }
-                            return Mono.just(prepareAuthenticationResponse(claims, userDetails));
-                        })));
+                        .then(Mono.just(userDetails)))
+                .flatMap(userDetails -> {
+                    if (DateUtils.isBeforeNow((Long) claims.get("exp"))) {
+                        return Mono.error(new UnauthorizedException("Token Expired"));
+                    }
+                    return Mono.just(prepareAuthenticationResponse(claims, userDetails));
+                })
+                ;
 
     }
 

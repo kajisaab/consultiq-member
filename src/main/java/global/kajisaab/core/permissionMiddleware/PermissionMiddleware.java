@@ -7,5 +7,5 @@ import reactor.core.publisher.Mono;
 
 public interface PermissionMiddleware {
 
-    Mono<Void> validateAuthorization(UserDetailsEntity user, String route, HttpRequest<?> currentRequest, String tenantId) throws PermissionDeniedException;
+    Mono<Void> validateAuthorization(UserDetailsEntity user, HttpRequest<?> currentRequest, String tenantId) throws PermissionDeniedException;
 }

@@ -7,7 +7,6 @@ import global.kajisaab.core.multitenancy.TenantContext;
 import global.kajisaab.core.permissionMiddleware.PermissionMiddleware;
 import global.kajisaab.feature.auth.entity.UserDetailsEntity;
 import io.micronaut.http.HttpRequest;
-import io.micronaut.http.context.ServerRequestContext;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import org.slf4j.Logger;
@@ -16,7 +15,6 @@ import reactor.core.publisher.Mono;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 @Singleton
 public class PermissionMiddlewareImpl implements PermissionMiddleware {
@@ -31,7 +29,7 @@ public class PermissionMiddlewareImpl implements PermissionMiddleware {
     }
 
     @Override
-    public Mono<Void> validateAuthorization(UserDetailsEntity user, String route, HttpRequest<?> currentRequest, String tenantId) throws PermissionDeniedException {
+    public Mono<Void> validateAuthorization(UserDetailsEntity user, HttpRequest<?> currentRequest, String tenantId) throws PermissionDeniedException {
 
 
         String requestUrl = currentRequest.getUri().toString();
@@ -56,10 +54,13 @@ public class PermissionMiddlewareImpl implements PermissionMiddleware {
 
             // Check if the endpoint and method are valid
             authorized = PermissionConstant.isValidPermissionForEndpointAndMethod(originalUrl, method);
-            LOG.info("Inside the permission middleware: {}", authorized);
+
+            if (!authorized) {
+                return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
+            }
 
             // Check if URL permissions are valid
-            if (urlPermissions != null && !urlPermissions.isEmpty() && authorized) {
+            if (urlPermissions != null && !urlPermissions.isEmpty()) {
                 try {
                     // Asynchronously validate permissions
                     return this.permissionMiddlewareServiceImpl.validatePermission(userRoles, urlPermissions)

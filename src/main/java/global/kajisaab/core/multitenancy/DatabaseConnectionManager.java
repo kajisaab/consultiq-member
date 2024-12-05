@@ -19,9 +19,6 @@ public class DatabaseConnectionManager {
     @Inject
     public DatabaseConnectionManager(DbConfig dbConfig) {
         this.dbConfig = dbConfig;
-        // Convert r2dbc URL to JDBC URL
-        // From: r2dbc:postgresql://localhost:5432/consultiq
-        // To:   jdbc:postgresql://localhost:5432/consultiq
         this.url = dbConfig.getDbUrl().replace("r2dbc:", "jdbc:");
         this.username = dbConfig.getUsername();
         this.password = dbConfig.getDbPassword();
@@ -30,7 +27,7 @@ public class DatabaseConnectionManager {
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("PostgreSQL JDBC Driver not found", e);
+            throw new RuntimeException("PostgresSQL JDBC Driver not found", e);
         }
     }
 

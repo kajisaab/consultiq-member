@@ -2,7 +2,6 @@ package global.kajisaab.core.jwtService;
 
 import global.kajisaab.common.utils.DateUtils;
 import global.kajisaab.common.constants.TokenTypeEnum;
-import global.kajisaab.common.utils.JsonUtils;
 import global.kajisaab.core.exceptionHandling.BadRequestException;
 import global.kajisaab.core.exceptionHandling.UnauthorizedException;
 import global.kajisaab.feature.auth.entity.UserDetailsEntity;

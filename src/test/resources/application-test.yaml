@@ -1,4 +1,8 @@
 micronaut:
+  multitenancy:
+    tenantresolver:
+      token:
+        enabled: true
   views:
     default-extension: html
     folder: views
@@ -13,6 +17,7 @@ micronaut:
         allow-credentials: true
     port: ${APP_PORT:9090}
     context-path: /api/v1
+    request-context: true
   security:
     authentication: bearer
     token:
@@ -79,7 +84,6 @@ r2dbc:
         protocol: postgres
         initialSize: 5
         maxSize: 50
-        schema: ${TENANT_SCHEMA:operator}
       schema-generate: none
       dialect: postgres
 

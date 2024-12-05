@@ -47,7 +47,6 @@ dependencies {
     implementation("org.yaml:snakeyaml")
     implementation("io.micronaut.multitenancy:micronaut-multitenancy")
     implementation 'org.postgresql:postgresql:42.6.0'
-    implementation "io.micronaut.reactor:micronaut-reactor"
     implementation("io.micronaut.grpc:micronaut-grpc-server-runtime")
     implementation("io.micronaut.grpc:micronaut-grpc-client-runtime")
 
@@ -77,6 +76,7 @@ dependencies {
     testImplementation("io.micronaut:micronaut-http-client")
     testImplementation("org.mockito:mockito-core")
     testResourcesService("org.postgresql:postgresql")
+    testImplementation ('io.projectreactor:reactor-test') // Use the matching version for your setup
 
     // AOT Plugins
     aotPlugins platform("io.micronaut.platform:micronaut-platform:4.6.3")
