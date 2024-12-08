@@ -27,7 +27,7 @@ micronaut:
             generator:
               secret: ${JWT_GENERATOR_SIGNATURE_SECRET:df3d25e6b2209fe4867e4061b3a6797dfebf8425ed7da69bbc3c15035ee1e85a}
               jws-algorithm: HS256
-              expiration: 600000  # Access token expiration in seconds (10 minutes)
+              expiration: 600  # Access token expiration in seconds (10 minutes)
             validator:
               secret: ${JWT_VALIDATOR_SIGNATURE_SECRET:df3d25e6b2209fe4867e4061b3a6797dfebf8425ed7da69bbc3c15035ee1e85a}
               jws-algorithm: HS256
@@ -95,8 +95,8 @@ email:
   smtp:
     host: "smtp.gmail.com"
     port: "587"
-    username: ${JAVA_MAIL_EMAIL_USERNAME:`smudbhari85`}
-    password: ${JAVA_MAIL_EMAIL_PASSWORD:`hhirtevxxttrtgza`}
+    username: ${JAVA_MAIL_EMAIL_USERNAME:`amankhadkakaji`}
+    password: ${JAVA_MAIL_EMAIL_PASSWORD:`uqdewgtrywmnzhjb`}
     from: "amankhadkakaji@gmail.com"
     properties:
       auth: "true"
