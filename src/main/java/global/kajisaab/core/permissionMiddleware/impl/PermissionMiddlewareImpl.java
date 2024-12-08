@@ -42,6 +42,7 @@ public class PermissionMiddlewareImpl implements PermissionMiddleware {
 
             String method = currentRequest.getMethodName();
             String originalUrl = requestUrl.replaceAll("^(\\/)?v1|\\/$", "");
+
             List<String> urlPermissions = PermissionConstant.getPermissionsByEndpointAndMethod(originalUrl, method);
 
             List<String> userRoles = new ArrayList<>();
@@ -58,13 +59,13 @@ public class PermissionMiddlewareImpl implements PermissionMiddleware {
             if (!authorized) {
                 return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
             }
-
             // Check if URL permissions are valid
             if (urlPermissions != null && !urlPermissions.isEmpty()) {
                 try {
                     // Asynchronously validate permissions
                     return this.permissionMiddlewareServiceImpl.validatePermission(userRoles, urlPermissions)
                             .flatMap(permissionValid -> {
+                                System.out.println("Permission valid: " + permissionValid);
                                 if (!permissionValid) {
                                     return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
                                 }

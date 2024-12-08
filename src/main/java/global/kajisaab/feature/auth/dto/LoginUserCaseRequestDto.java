@@ -2,6 +2,7 @@ package global.kajisaab.feature.auth.dto;
 
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.serde.annotation.Serdeable;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 
 @Serdeable
@@ -9,10 +10,12 @@ import jakarta.validation.constraints.NotBlank;
 public class LoginUserCaseRequestDto {
 
     @NotBlank(message = "Email is required")
-    private String email;
+    @Schema(description = "The email address of the user", defaultValue = "user@example.com")
+    private String email = "user@example.com";
 
     @NotBlank(message = "Password is required")
-    private String password;
+    @Schema(description = "The password for the user account", defaultValue = "=FZ9[m7")
+    private String password = "=FZ9[m7";
 
 
     public @NotBlank(message = "Email is required") String getEmail() {

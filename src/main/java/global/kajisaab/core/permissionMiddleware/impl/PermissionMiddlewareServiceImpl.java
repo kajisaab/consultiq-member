@@ -24,20 +24,21 @@ public class PermissionMiddlewareServiceImpl implements PermissionMiddlewareServ
     public Mono<Boolean> validatePermission(List<String> userRoles, List<String> urlPermissions) {
 
         if (userRoles.isEmpty()) {
-            return Mono.just(true);
+            return Mono.just(false);
         }
-
 
         return rolesRepository.findAllByIdIn(userRoles)
                 .collectList()
                 .flatMap(roles -> {
+                    System.out.println("Torles roles");
                     Set<String> allowedPermissions = roles.stream()
                             .filter(rolePermission -> rolePermission.isDeleted() && rolePermission.getActive())
                             .flatMap(rolePermission -> rolePermission.getPermissions().stream())
                             .collect(Collectors.toSet());
 
                     return Mono.just(urlPermissions.stream().anyMatch(allowedPermissions::contains));
-                });
+                })
+                .switchIfEmpty(Mono.just(false));
     }
 
     @Override
