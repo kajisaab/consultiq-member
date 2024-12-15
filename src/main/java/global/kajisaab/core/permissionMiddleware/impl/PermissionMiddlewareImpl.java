@@ -65,7 +65,6 @@ public class PermissionMiddlewareImpl implements PermissionMiddleware {
                     // Asynchronously validate permissions
                     return this.permissionMiddlewareServiceImpl.validatePermission(userRoles, urlPermissions)
                             .flatMap(permissionValid -> {
-                                System.out.println("Permission valid: " + permissionValid);
                                 if (!permissionValid) {
                                     return Mono.error(new PermissionDeniedException("You are not authorized to access this resource"));
                                 }

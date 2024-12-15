@@ -5418,3 +5418,1112 @@ Caused by: java.nio.channels.ClosedChannelException: null
 2024-12-08 21:50:17,582 ERROR [io-executor-thread-1] g.k.c.p.i.PermissionMiddlewareImpl [PermissionMiddlewareImpl.java:76] - Authorization error: Cannot invoke "reactor.core.publisher.Mono.flatMap(java.util.function.Function)" because the return value of "global.kajisaab.core.permissionMiddleware.impl.PermissionMiddlewareServiceImpl.validatePermission(java.util.List, java.util.List)" is null
 2024-12-08 21:52:27,757 INFO [io-executor-thread-1] g.k.c.p.i.PermissionMiddlewareImpl [PermissionMiddlewareImpl.java:62] - This is the url permissions: [dashboard:cards]
 2024-12-08 21:52:27,759 ERROR [io-executor-thread-1] g.k.c.p.i.PermissionMiddlewareImpl [PermissionMiddlewareImpl.java:76] - Authorization error: Cannot invoke "reactor.core.publisher.Mono.flatMap(java.util.function.Function)" because the return value of "global.kajisaab.core.permissionMiddleware.impl.PermissionMiddlewareServiceImpl.validatePermission(java.util.List, java.util.List)" is null
+2024-12-15 10:32:53,383 ERROR [io-executor-thread-1] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token Invalid compact JWT string: Compact JWSs must contain exactly 2 period characters, and compact JWEs must contain exactly 4.  Found: 0
+2024-12-15 10:34:20,992 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 41474184 bytes
+2024-12-15 10:35:00,819 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:35:00,851 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 10:35:00,891 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:35:20,018 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:36:30,164 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 75497472 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 47062048 bytes
+2024-12-15 10:36:42,674 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:36:42,716 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:38:13,993 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 73400320 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 43840848 bytes
+2024-12-15 10:38:20,264 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:38:20,300 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:38:20,321 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 10:38:20,331 ERROR [reactor-tcp-nio-5] i.m.h.s.RouteExecutor [RouteExecutor.java:270] - Unexpected error occurred: Error encoding object [ResponseHandlerDto[code=0, message=SUCCESS, data=GetPermissionUIUseCaseResponse[list=[{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]]]] to JSON: No serializable introspection present for type GetPermissionUIUseCaseResponse. Consider adding Serdeable. Serializable annotate to type GetPermissionUIUseCaseResponse. Alternatively if you are not in control of the project's source code, you can use @SerdeImport(GetPermissionUIUseCaseResponse.class) to enable serialization of this type.
+io.micronaut.http.codec.CodecException: Error encoding object [ResponseHandlerDto[code=0, message=SUCCESS, data=GetPermissionUIUseCaseResponse[list=[{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]]]] to JSON: No serializable introspection present for type GetPermissionUIUseCaseResponse. Consider adding Serdeable. Serializable annotate to type GetPermissionUIUseCaseResponse. Alternatively if you are not in control of the project's source code, you can use @SerdeImport(GetPermissionUIUseCaseResponse.class) to enable serialization of this type.
+	at io.micronaut.http.netty.body.NettyJsonHandler.write(NettyJsonHandler.java:144)
+	at io.micronaut.http.server.netty.RoutingInBoundHandler.buildFinalResponse(RoutingInBoundHandler.java:401)
+	at io.micronaut.http.server.netty.RoutingInBoundHandler.encodeHttpResponse(RoutingInBoundHandler.java:377)
+	at io.micronaut.http.server.netty.RoutingInBoundHandler.writeResponse(RoutingInBoundHandler.java:250)
+	at io.micronaut.http.server.netty.NettyRequestLifecycle.lambda$handleNormal$0(NettyRequestLifecycle.java:107)
+	at io.micronaut.http.reactive.execution.ReactorExecutionFlowImpl$1.onComplete(ReactorExecutionFlowImpl.java:121)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:159)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(MonoContextWriteRestoringThreadLocals.java:110)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at io.micronaut.core.async.propagation.ReactivePropagation$2.onNext(ReactivePropagation.java:108)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:245)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onNext(MonoFlatMap.java:305)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onNext(MonoFlatMapMany.java:251)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(MonoContextWriteRestoringThreadLocals.java:110)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at io.micronaut.core.async.propagation.ReactivePropagation$2.onNext(ReactivePropagation.java:108)
+	at reactor.core.publisher.FluxSwitchMapNoPrefetch$SwitchMapInner.onNext(FluxSwitchMapNoPrefetch.java:408)
+	at reactor.core.publisher.Operators$ScalarSubscription.request(Operators.java:2571)
+	at reactor.core.publisher.FluxSwitchMapNoPrefetch$SwitchMapInner.onSubscribe(FluxSwitchMapNoPrefetch.java:378)
+	at reactor.core.publisher.FluxJust.subscribe(FluxJust.java:68)
+	at reactor.core.publisher.Flux.subscribe(Flux.java:8848)
+	at reactor.core.publisher.FluxSwitchMapNoPrefetch$SwitchMapMain.subscribeInner(FluxSwitchMapNoPrefetch.java:219)
+	at reactor.core.publisher.FluxSwitchMapNoPrefetch$SwitchMapMain.onNext(FluxSwitchMapNoPrefetch.java:164)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onNext(FluxOnErrorResume.java:79)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:158)
+	at reactor.core.publisher.FluxMap$MapSubscriber.onNext(FluxMap.java:122)
+	at reactor.core.publisher.MonoContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(MonoContextWriteRestoringThreadLocals.java:110)
+	at reactor.core.publisher.MonoNext$NextSubscriber.onNext(MonoNext.java:82)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at io.micronaut.core.async.propagation.ReactivePropagation$2.onNext(ReactivePropagation.java:108)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxSwitchIfEmpty$SwitchIfEmptySubscriber.onNext(FluxSwitchIfEmpty.java:74)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.tryEmitScalar(FluxFlatMap.java:492)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onNext(FluxFlatMap.java:424)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:129)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+Caused by: io.micronaut.serde.exceptions.SerdeException: No serializable introspection present for type GetPermissionUIUseCaseResponse. Consider adding Serdeable. Serializable annotate to type GetPermissionUIUseCaseResponse. Alternatively if you are not in control of the project's source code, you can use @SerdeImport(GetPermissionUIUseCaseResponse.class) to enable serialization of this type.
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.lambda$getSerializer$0(RuntimeTypeSerializer.java:135)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1713)
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.getSerializer(RuntimeTypeSerializer.java:131)
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.serialize(RuntimeTypeSerializer.java:76)
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.serialize(RuntimeTypeSerializer.java:78)
+	at io.micronaut.serde.support.serializers.SimpleObjectSerializer.serialize(SimpleObjectSerializer.java:54)
+	at io.micronaut.serde.support.serializers.ErrorCatchingSerializer.serialize(ErrorCatchingSerializer.java:45)
+	at io.micronaut.serde.jackson.JacksonJsonMapper.writeValue(JacksonJsonMapper.java:246)
+	at io.micronaut.serde.jackson.JacksonJsonMapper.writeValue0(JacksonJsonMapper.java:228)
+	at io.micronaut.serde.jackson.JacksonJsonMapper.writeValue0(JacksonJsonMapper.java:223)
+	at io.micronaut.serde.jackson.JacksonJsonMapper.writeValue(JacksonJsonMapper.java:328)
+	at io.micronaut.http.netty.body.NettyJsonHandler.write(NettyJsonHandler.java:141)
+	... 110 common frames omitted
+Caused by: io.micronaut.core.beans.exceptions.IntrospectionException: No serializable introspection present for type GetPermissionUIUseCaseResponse. Consider adding Serdeable. Serializable annotate to type GetPermissionUIUseCaseResponse. Alternatively if you are not in control of the project's source code, you can use @SerdeImport(GetPermissionUIUseCaseResponse.class) to enable serialization of this type.
+	at io.micronaut.serde.support.DefaultSerdeIntrospections.getSerializableIntrospection(DefaultSerdeIntrospections.java:111)
+	at io.micronaut.serde.support.serializers.SerBean.<init>(SerBean.java:117)
+	at io.micronaut.serde.support.serializers.ObjectSerializer.lambda$getSerializableBean$0(ObjectSerializer.java:165)
+	at io.micronaut.core.util.SupplierUtil$2.get(SupplierUtil.java:79)
+	at io.micronaut.serde.support.serializers.ObjectSerializer.getSerializableBean(ObjectSerializer.java:170)
+	at io.micronaut.serde.support.serializers.ObjectSerializer.createSpecificInternal(ObjectSerializer.java:107)
+	at io.micronaut.serde.support.serializers.ObjectSerializer.createSpecific(ObjectSerializer.java:99)
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.lambda$getSerializer$0(RuntimeTypeSerializer.java:140)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1713)
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.getSerializer(RuntimeTypeSerializer.java:131)
+	at io.micronaut.serde.support.serializers.RuntimeTypeSerializer.serialize(RuntimeTypeSerializer.java:76)
+	... 117 common frames omitted
+2024-12-15 10:38:47,423 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42427072 bytes
+2024-12-15 10:38:51,183 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:38:51,216 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:38:51,236 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 10:39:29,723 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 41443432 bytes
+2024-12-15 10:39:39,827 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:39:39,864 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:39:39,886 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 10:44:28,335 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 40079432 bytes
+2024-12-15 10:44:30,937 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:44:30,972 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:44:30,995 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, value=dashboard}, {permissions=[], groups=[], label=Client & Group, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, value=educationFirm}]
+2024-12-15 10:45:00,837 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42830488 bytes
+2024-12-15 10:45:02,787 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 2785 milliseconds ago at 2024-12-15T05:00:00.000Z. Current time: 2024-12-15T05:00:02.785Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 10:45:46,630 ERROR [default-nioEventLoopGroup-1-3] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 46629 milliseconds ago at 2024-12-15T05:00:00.000Z. Current time: 2024-12-15T05:00:46.629Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 10:45:59,145 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:45:59,178 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 10:45:59,216 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:46:17,188 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:46:17,212 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:46:17,236 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 10:51:01,082 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42591816 bytes
+2024-12-15 10:51:03,183 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:51:03,220 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:51:03,239 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 10:55:03,867 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 73400320 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 28268264 bytes
+2024-12-15 10:55:06,429 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:55:06,471 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:55:06,490 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, value=dashboard}, {permissions=[], groups=[], label=Client & Group, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, value=educationFirm}]
+2024-12-15 10:58:56,762 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 41063976 bytes
+2024-12-15 10:58:59,081 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 180079 milliseconds ago at 2024-12-15T05:10:59.000Z. Current time: 2024-12-15T05:13:59.079Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 10:59:08,115 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:59:08,150 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 10:59:08,203 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:59:19,363 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 10:59:19,384 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 10:59:19,403 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:00:46,565 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 75497472 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 48959744 bytes
+2024-12-15 11:00:49,452 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:00:49,485 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:00:49,565 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:01:25,373 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 76546048 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 32620928 bytes
+2024-12-15 11:01:27,740 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:01:27,774 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:01:27,794 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:04:33,703 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 62914560 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 12694824 bytes
+2024-12-15 11:04:41,595 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:04:41,628 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:04:41,649 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:05:47,508 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 68157440 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 35251584 bytes
+2024-12-15 11:05:51,699 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:05:51,733 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:05:51,753 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:10:16,695 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42664840 bytes
+2024-12-15 11:10:18,731 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 70729 milliseconds ago at 2024-12-15T05:24:08.000Z. Current time: 2024-12-15T05:25:18.729Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 11:10:27,998 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:10:28,029 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 11:10:28,066 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:10:39,745 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:10:39,774 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:10:39,799 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[{permissions=[], groups=[], label=Delete Client, type=PERMISSION, value=client:deleteClient}, {permissions=[], groups=[], label=Client List, type=PERMISSION, value=client:clientList}, {permissions=[], groups=[], label=Client Summary, type=PERMISSION, value=client:summary}, {permissions=[], groups=[], label=Update Client, type=PERMISSION, value=client:updateClient}, {permissions=[], groups=[], label=Add Client, type=PERMISSION, value=client:addClient}, {permissions=[], groups=[], label=Import Client Details, type=PERMISSION, value=client:importClient}, {permissions=[], groups=[], label=Export Client Details, type=PERMISSION, value=client:exportClientDetails}], label=Client, type=GROUP, value=client}, {permissions=[], groups=[{permissions=[], groups=[], label=Group Summary List, type=PERMISSION, value=group:groupSummaryList}, {permissions=[], groups=[], label=Group List, type=PERMISSION, value=group:list}, {permissions=[], groups=[], label=Add Group, type=PERMISSION, value=group:addGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}, {permissions=[], groups=[], label=Edit Group, type=PERMISSION, value=group:editGroup}, {permissions=[], groups=[], label=Delete Group, type=PERMISSION, value=group:deleteGroup}], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[{permissions=[], groups=[], label=Eduction Firm List, type=PERMISSION, value=educationFirm:list}, {permissions=[], groups=[], label=Add Education Firm, type=PERMISSION, value=educationFirm:add}, {permissions=[], groups=[], label=Update Education Firm, type=PERMISSION, value=educationFirm:update}, {permissions=[], groups=[], label=Delete Education Firm, type=PERMISSION, value=educationFirm:delete}, {permissions=[], groups=[], label=Education Firm Summary, type=PERMISSION, value=educationFirm:summary}], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:13:01,887 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 74448896 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 29597424 bytes
+2024-12-15 11:13:11,840 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:13:11,878 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:13:11,904 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "parentNode" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:16:10,374 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42036616 bytes
+2024-12-15 11:16:15,423 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:16:15,459 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:16:15,484 ERROR [reactor-tcp-nio-4] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "parentNode" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:96)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:19:15,308 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 24969256 bytes
+2024-12-15 11:19:19,070 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:19:19,102 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:19:19,128 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[null, null, null, null, null, null, null], label=Client, type=GROUP, value=client}, {permissions=[], groups=[null, null, null, null, null, null], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[null, null, null, null, null], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:21:33,720 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 39873944 bytes
+2024-12-15 11:21:34,954 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 66952 milliseconds ago at 2024-12-15T05:35:28.000Z. Current time: 2024-12-15T05:36:34.952Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 11:21:41,772 ERROR [default-nioEventLoopGroup-1-3] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 73771 milliseconds ago at 2024-12-15T05:35:28.000Z. Current time: 2024-12-15T05:36:41.771Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 11:21:49,322 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:21:49,365 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 11:21:49,384 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:22:01,846 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:22:01,862 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:22:01,883 INFO [reactor-tcp-nio-1] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[{permissions=[null, null, null, null, null, null, null], groups=[], label=Client, type=GROUP, value=client}, {permissions=[null, null, null, null, null, null], groups=[], label=GROUP, type=GROUP, value=group}], groups=[], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[null, null, null, null, null], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:31:54,547 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 40129856 bytes
+2024-12-15 11:32:17,395 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 28388 milliseconds ago at 2024-12-15T05:46:49.000Z. Current time: 2024-12-15T05:47:17.388Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 11:32:32,669 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:32:32,706 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 11:32:32,748 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:32:46,135 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:32:46,159 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:32:46,188 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:34:07,564 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 41631648 bytes
+2024-12-15 11:34:11,142 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:34:11,179 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:34:11,202 ERROR [reactor-tcp-nio-4] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:36:27,113 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 41397216 bytes
+2024-12-15 11:36:33,621 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:36:33,664 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:36:33,687 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:37:41,057 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 75497472 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 45259008 bytes
+2024-12-15 11:37:43,374 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:37:43,410 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:37:43,434 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:39:46,159 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 75497472 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 49077136 bytes
+2024-12-15 11:39:49,715 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:39:49,752 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:39:49,776 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$4(RolesDetailsRepository.java:100)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:90)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:40:22,724 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 41952464 bytes
+2024-12-15 11:40:28,536 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:40:28,573 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:40:28,599 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$5(RolesDetailsRepository.java:118)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:108)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:40:54,598 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 25309400 bytes
+2024-12-15 11:40:56,783 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:40:56,814 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:40:56,836 ERROR [reactor-tcp-nio-5] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+java.lang.NullPointerException: Cannot invoke "java.util.List.add(Object)" because the return value of "java.util.Map.get(Object)" is null
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.lambda$buildTreeStructure$5(RolesDetailsRepository.java:118)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at global.kajisaab.feature.roles.repository.ModulePermissionDetailRepository.buildTreeStructure(RolesDetailsRepository.java:108)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onNext(FluxMapFuseable.java:113)
+	at reactor.core.publisher.FluxPeekFuseable$PeekFuseableSubscriber.onNext(FluxPeekFuseable.java:210)
+	at reactor.core.publisher.Operators$BaseFluxToMonoOperator.completePossiblyEmpty(Operators.java:2097)
+	at reactor.core.publisher.MonoCollectList$MonoCollectListSubscriber.onComplete(MonoCollectList.java:118)
+	at reactor.core.publisher.MonoFlatMapMany$FlatMapManyInner.onComplete(MonoFlatMapMany.java:261)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.checkTerminated(FluxFlatMap.java:850)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drainLoop(FluxFlatMap.java:612)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.drain(FluxFlatMap.java:592)
+	at reactor.core.publisher.FluxFlatMap$FlatMapMain.onComplete(FluxFlatMap.java:469)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxMapFuseable$MapFuseableSubscriber.onComplete(FluxMapFuseable.java:152)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.checkTerminated(FluxWindowPredicate.java:540)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drainLoop(FluxWindowPredicate.java:488)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.drain(FluxWindowPredicate.java:432)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onComplete(FluxWindowPredicate.java:312)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onComplete(FluxDiscardOnCancel.java:104)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onComplete(FluxContextWrite.java:126)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onComplete(FluxContextWriteRestoringThreadLocals.java:149)
+	at reactor.core.publisher.FluxCreate$BaseSink.complete(FluxCreate.java:465)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:871)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.complete(FluxCreate.java:819)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drainLoop(FluxCreate.java:249)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.drain(FluxCreate.java:215)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.complete(FluxCreate.java:206)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.complete(ReactorNettyClient.java:680)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:946)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 11:41:13,018 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 75497472 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 48634168 bytes
+2024-12-15 11:41:15,044 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:41:15,081 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:41:15,100 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values []
+2024-12-15 11:45:03,844 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42827848 bytes
+2024-12-15 11:45:06,218 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 154215 milliseconds ago at 2024-12-15T05:57:32.000Z. Current time: 2024-12-15T06:00:06.215Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 11:45:15,275 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:45:15,308 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 11:45:15,356 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:45:29,331 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:45:29,351 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:45:29,370 INFO [reactor-tcp-nio-1] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values []
+2024-12-15 11:46:47,011 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 68157440 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 35164760 bytes
+2024-12-15 11:46:50,488 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:46:50,530 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:46:50,549 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values []
+2024-12-15 11:48:07,184 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 59768832 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 29968936 bytes
+2024-12-15 11:48:30,219 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:48:30,257 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:48:30,276 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values []
+2024-12-15 11:49:23,352 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 77594624 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 49899432 bytes
+2024-12-15 11:52:29,110 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 67108864 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 17514288 bytes
+2024-12-15 11:52:31,202 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:52:31,241 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:52:31,263 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[], groups=[], label=Client, type=GROUP, value=client}, {permissions=[], groups=[], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:56:22,319 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 74448896 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 40763768 bytes
+2024-12-15 11:56:24,799 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 69796 milliseconds ago at 2024-12-15T06:10:15.000Z. Current time: 2024-12-15T06:11:24.796Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 11:56:34,847 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:56:34,880 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 11:56:34,908 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:56:47,921 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:56:47,943 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:56:47,969 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, type=MODULE, value=dashboard}, {permissions=[], groups=[{permissions=[{label=Delete Client, value=client:deleteClient}, {label=Client List, value=client:clientList}, {label=Client Summary, value=client:summary}, {label=Update Client, value=client:updateClient}, {label=Add Client, value=client:addClient}, {label=Import Client Details, value=client:importClient}, {label=Export Client Details, value=client:exportClientDetails}], groups=[], label=Client, type=GROUP, value=client}, {permissions=[{label=Group Summary List, value=group:groupSummaryList}, {label=Group List, value=group:list}, {label=Add Group, value=group:addGroup}, {label=Delete Group, value=group:deleteGroup}, {label=Edit Group, value=group:editGroup}, {label=Delete Group, value=group:deleteGroup}], groups=[], label=GROUP, type=GROUP, value=group}], label=Client & Group, type=MODULE, value=clientAndGroup}, {permissions=[{label=Eduction Firm List, value=educationFirm:list}, {label=Add Education Firm, value=educationFirm:add}, {label=Update Education Firm, value=educationFirm:update}, {label=Delete Education Firm, value=educationFirm:delete}, {label=Education Firm Summary, value=educationFirm:summary}], groups=[], label=Education Firm, type=MODULE, value=educationFirm}]
+2024-12-15 11:59:10,605 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42165240 bytes
+2024-12-15 11:59:12,183 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 11:59:12,215 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 11:59:12,238 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, value=dashboard}, {permissions=[], groups=[{permissions=[{label=Delete Client, value=client:deleteClient}, {label=Client List, value=client:clientList}, {label=Client Summary, value=client:summary}, {label=Update Client, value=client:updateClient}, {label=Add Client, value=client:addClient}, {label=Import Client Details, value=client:importClient}, {label=Export Client Details, value=client:exportClientDetails}], groups=[], label=Client, value=client}, {permissions=[{label=Group Summary List, value=group:groupSummaryList}, {label=Group List, value=group:list}, {label=Add Group, value=group:addGroup}, {label=Delete Group, value=group:deleteGroup}, {label=Edit Group, value=group:editGroup}, {label=Delete Group, value=group:deleteGroup}], groups=[], label=GROUP, value=group}], label=Client & Group, value=clientAndGroup}, {permissions=[{label=Eduction Firm List, value=educationFirm:list}, {label=Add Education Firm, value=educationFirm:add}, {label=Update Education Firm, value=educationFirm:update}, {label=Delete Education Firm, value=educationFirm:delete}, {label=Education Firm Summary, value=educationFirm:summary}], groups=[], label=Education Firm, value=educationFirm}]
+2024-12-15 13:32:57,979 ERROR [default-nioEventLoopGroup-1-3] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 5183969 milliseconds ago at 2024-12-15T06:21:34.000Z. Current time: 2024-12-15T07:47:57.969Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 13:33:08,456 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 13:33:08,491 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 13:33:08,526 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 13:33:24,091 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 13:33:24,110 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 13:33:24,125 INFO [reactor-tcp-nio-5] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, value=dashboard}, {permissions=[], groups=[{permissions=[{label=Delete Client, value=client:deleteClient}, {label=Client List, value=client:clientList}, {label=Client Summary, value=client:summary}, {label=Update Client, value=client:updateClient}, {label=Add Client, value=client:addClient}, {label=Import Client Details, value=client:importClient}, {label=Export Client Details, value=client:exportClientDetails}], groups=[], label=Client, value=client}, {permissions=[{label=Group Summary List, value=group:groupSummaryList}, {label=Group List, value=group:list}, {label=Add Group, value=group:addGroup}, {label=Delete Group, value=group:deleteGroup}, {label=Edit Group, value=group:editGroup}, {label=Delete Group, value=group:deleteGroup}], groups=[], label=GROUP, value=group}], label=Client & Group, value=clientAndGroup}, {permissions=[{label=Eduction Firm List, value=educationFirm:list}, {label=Add Education Firm, value=educationFirm:add}, {label=Update Education Firm, value=educationFirm:update}, {label=Delete Education Firm, value=educationFirm:delete}, {label=Education Firm Summary, value=educationFirm:summary}], groups=[], label=Education Firm, value=educationFirm}]
+2024-12-15 13:40:34,136 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 68157440 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 34033344 bytes
+2024-12-15 13:40:46,015 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 13:40:46,053 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 13:40:46,080 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, value=dashboard}, {permissions=[], groups=[{permissions=[{label=Delete Client, value=client:deleteClient}, {label=Client List, value=client:clientList}, {label=Client Summary, value=client:summary}, {label=Update Client, value=client:updateClient}, {label=Add Client, value=client:addClient}, {label=Import Client Details, value=client:importClient}, {label=Export Client Details, value=client:exportClientDetails}], groups=[], label=Client, value=client}, {permissions=[{label=Group Summary List, value=group:groupSummaryList}, {label=Group List, value=group:list}, {label=Add Group, value=group:addGroup}, {label=Delete Group, value=group:deleteGroup}, {label=Edit Group, value=group:editGroup}, {label=Delete Group, value=group:deleteGroup}], groups=[], label=GROUP, value=group}], label=Client & Group, value=clientAndGroup}, {permissions=[{label=Eduction Firm List, value=educationFirm:list}, {label=Add Education Firm, value=educationFirm:add}, {label=Update Education Firm, value=educationFirm:update}, {label=Delete Education Firm, value=educationFirm:delete}, {label=Education Firm Summary, value=educationFirm:summary}], groups=[], label=Education Firm, value=educationFirm}]
+2024-12-15 13:41:33,759 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 44311824 bytes
+2024-12-15 13:41:41,442 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 13:41:41,477 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 13:41:41,496 INFO [reactor-tcp-nio-4] g.k.f.r.u.GetPermissionUIUseCase [GetPermissionUIUseCase.java:29] - values [{permissions=[], groups=[], label=Dashboard, value=dashboard}, {permissions=[], groups=[{permissions=[{label=Delete Client, value=client:deleteClient}, {label=Client List, value=client:clientList}, {label=Client Summary, value=client:summary}, {label=Update Client, value=client:updateClient}, {label=Add Client, value=client:addClient}, {label=Import Client Details, value=client:importClient}, {label=Export Client Details, value=client:exportClientDetails}], groups=[], label=Client, value=client}, {permissions=[{label=Group Summary List, value=group:groupSummaryList}, {label=Group List, value=group:list}, {label=Add Group, value=group:addGroup}, {label=Delete Group, value=group:deleteGroup}, {label=Edit Group, value=group:editGroup}, {label=Delete Group, value=group:deleteGroup}], groups=[], label=GROUP, value=group}], label=Client & Group, value=clientAndGroup}, {permissions=[{label=Eduction Firm List, value=educationFirm:list}, {label=Add Education Firm, value=educationFirm:add}, {label=Update Education Firm, value=educationFirm:update}, {label=Delete Education Firm, value=educationFirm:delete}, {label=Education Firm Summary, value=educationFirm:summary}], groups=[], label=Education Firm, value=educationFirm}]
+2024-12-15 14:06:15,955 ERROR [default-nioEventLoopGroup-1-3] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 1387919 milliseconds ago at 2024-12-15T07:58:08.000Z. Current time: 2024-12-15T08:21:15.919Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 14:18:57,414 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 42107184 bytes
+2024-12-15 14:19:12,176 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 14:19:12,210 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 14:19:12,248 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 14:19:27,078 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 14:19:27,091 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 14:19:27,106 ERROR [reactor-tcp-nio-4] g.k.c.e.i.ThrowableExceptionImpl [ThrowableExceptionImpl.java:26] - Unhandled Exception occurred: 
+io.r2dbc.postgresql.ExceptionFactory$PostgresqlBadGrammarException: relation "consultancy_001.module_permission_detail" does not exist
+	at io.r2dbc.postgresql.ExceptionFactory.createException(ExceptionFactory.java:96)
+	at io.r2dbc.postgresql.ExceptionFactory.createException(ExceptionFactory.java:65)
+	at io.r2dbc.postgresql.ExceptionFactory.handleErrorResponse(ExceptionFactory.java:132)
+	at io.r2dbc.postgresql.PostgresqlResult.lambda$map$2(PostgresqlResult.java:117)
+	at reactor.core.publisher.FluxHandleFuseable$HandleFuseableSubscriber.onNext(FluxHandleFuseable.java:179)
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drainRegular(FluxWindowPredicate.java:670)
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.drain(FluxWindowPredicate.java:748)
+	at reactor.core.publisher.FluxWindowPredicate$WindowFlux.onNext(FluxWindowPredicate.java:790)
+	at reactor.core.publisher.FluxWindowPredicate$WindowPredicateMain.onNext(FluxWindowPredicate.java:241)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at io.r2dbc.postgresql.util.FluxDiscardOnCancel$FluxDiscardOnCancelSubscriber.onNext(FluxDiscardOnCancel.java:91)
+	at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.drain(FluxCreate.java:880)
+	at reactor.core.publisher.FluxCreate$BufferAsyncSink.next(FluxCreate.java:805)
+	at reactor.core.publisher.FluxCreate$SerializedFluxSink.next(FluxCreate.java:163)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$Conversation.emit(ReactorNettyClient.java:696)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.emit(ReactorNettyClient.java:948)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:822)
+	at io.r2dbc.postgresql.client.ReactorNettyClient$BackendMessageSubscriber.onNext(ReactorNettyClient.java:728)
+	at reactor.core.publisher.FluxHandle$HandleSubscriber.onNext(FluxHandle.java:129)
+	at reactor.core.publisher.FluxPeekFuseable$PeekConditionalSubscriber.onNext(FluxPeekFuseable.java:854)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.core.publisher.FluxMap$MapConditionalSubscriber.onNext(FluxMap.java:224)
+	at reactor.core.publisher.FluxContextWriteRestoringThreadLocals$ContextWriteRestoringThreadLocalsSubscriber.onNext(FluxContextWriteRestoringThreadLocals.java:118)
+	at reactor.netty.channel.FluxReceive.drainReceiver(FluxReceive.java:294)
+	at reactor.netty.channel.FluxReceive.onInboundNext(FluxReceive.java:403)
+	at reactor.netty.channel.ChannelOperations.onInboundNext(ChannelOperations.java:425)
+	at reactor.netty.channel.ChannelOperationsHandler.channelRead(ChannelOperationsHandler.java:115)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.handler.codec.ByteToMessageDecoder.fireChannelRead(ByteToMessageDecoder.java:346)
+	at io.netty.handler.codec.ByteToMessageDecoder.channelRead(ByteToMessageDecoder.java:318)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:444)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1357)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:868)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:166)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+2024-12-15 14:20:14,382 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 14:20:14,400 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 15:04:18,903 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 72351744 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 40110736 bytes
+2024-12-15 15:04:36,075 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 15:04:36,109 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 15:04:36,149 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 15:04:56,580 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 15:04:56,601 DEBUG [reactor-tcp-nio-5] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 15:58:25,209 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 75497472 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 44250032 bytes
+2024-12-15 15:58:32,102 ERROR [default-nioEventLoopGroup-1-2] g.k.c.j.JwtService [JwtService.java:52] - Invalid Token JWT expired 2636100 milliseconds ago at 2024-12-15T09:29:36.000Z. Current time: 2024-12-15T10:13:32.100Z. Allowed clock skew: 0 milliseconds.
+2024-12-15 15:58:40,201 DEBUG [reactor-tcp-nio-1] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 15:58:40,240 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_credential_entity_."id",user_credential_entity_."deleted",user_credential_entity_."created_by",user_credential_entity_."created_on",user_credential_entity_."last_modified_by",user_credential_entity_."last_modified_on",user_credential_entity_."user_id",user_credential_entity_."max_login_attempts",user_credential_entity_."login_attempts",user_credential_entity_."password",user_credential_entity_."password_history",user_credential_entity_."generated_salt" FROM "user_credential" user_credential_entity_ WHERE (user_credential_entity_."user_id" = $1)
+2024-12-15 15:58:40,259 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 15:58:56,234 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT user_details_entity_."id",user_details_entity_."deleted",user_details_entity_."created_by",user_details_entity_."created_on",user_details_entity_."last_modified_by",user_details_entity_."last_modified_on",user_details_entity_."full_name",user_details_entity_."email",user_details_entity_."user_type",user_details_entity_."user_image",user_details_entity_."blocked",user_details_entity_."active",user_details_entity_."roles",user_details_entity_."selected_theme",user_details_entity_."employee_id",user_details_entity_."user_position",user_details_entity_."branch" FROM "user_details" user_details_entity_ WHERE (user_details_entity_."email" = $1)
+2024-12-15 15:58:56,256 DEBUG [reactor-tcp-nio-4] i.m.d.query [AbstractSqlRepositoryOperations.java:215] - Executing Query: SELECT roles_."id",roles_."deleted",roles_."created_by",roles_."created_on",roles_."last_modified_by",roles_."last_modified_on",roles_."title",roles_."permissions",roles_."status",roles_."active" FROM "roles" roles_ WHERE (roles_."id" IN ($1))
+2024-12-15 21:35:37,530 INFO [main] g.k.Application [Application.java:88] - The application is starting at http://localhost:9090...
+Total heap size: 80740352 bytes
+Maximum heap size: 2147483648 bytes
+Free memory: 51783912 bytes

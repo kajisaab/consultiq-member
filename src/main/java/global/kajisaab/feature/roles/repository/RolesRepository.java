@@ -9,8 +9,6 @@ import reactor.core.publisher.Flux;
 
 import java.util.List;
 
-
-
 @R2dbcRepository(dialect = Dialect.POSTGRES)
 public interface RolesRepository extends ReactorPageableRepository<Roles, String>, ReactorJpaSpecificationExecutor<Roles> {
 

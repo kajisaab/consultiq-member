@@ -30,7 +30,6 @@ public class PermissionMiddlewareServiceImpl implements PermissionMiddlewareServ
         return rolesRepository.findAllByIdIn(userRoles)
                 .collectList()
                 .flatMap(roles -> {
-                    System.out.println("Torles roles");
                     Set<String> allowedPermissions = roles.stream()
                             .filter(rolePermission -> rolePermission.isDeleted() && rolePermission.getActive())
                             .flatMap(rolePermission -> rolePermission.getPermissions().stream())

@@ -44,6 +44,4 @@ public class AuthController {
     public Mono<HttpResponse<?>> getRefreshToken(){
         return this.refreshTokenUseCase.execute(new RefreshTokenUseCaseRequest()).map(ResponseHandler::responseBuilder);
     }
-
-
 }

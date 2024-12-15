@@ -8,10 +8,11 @@ import java.util.regex.Pattern;
 public enum PermissionConstant {
     LOGIN("/auth/login", "POST", Collections.emptyList()),
     REFRESH_TOKEN("/api/v1/auth/refresh-token", "GET", Collections.emptyList()),
-    DASHBOARD_CARD("/api/v1/dashboard/cards", "GET", Collections.singletonList("dashboard:cards")),
-    INDIVIDUAL_ROLE_DETAIL("/api/v1/roles/detail/:id", "GET", Collections.singletonList("roles:detail")),
-    ROLE_LIST("/api/v1/role/list", "POST", Collections.singletonList("roles:list"));
-//    DASHBOARD_TRANSACTIONS_BAR_COUNT("/dashboard-reports/transactions-bar/count/:period", "GET", Collections.singletonList("dashboard:transactionGraph")),
+    DASHBOARD_CARD("/api/v1/dashboard/cards", "GET", Collections.singletonList("dashboard")),
+    INDIVIDUAL_ROLE_DETAIL("/api/v1/roles/detail/:id", "GET", Collections.singletonList("iam:roles:summary")),
+    ROLE_LIST("/api/v1/role/list", "POST", Collections.singletonList("iam:roles:list")),
+    ROLE_UI("/api/v1/role/ui", "GET", Collections.singletonList("iam:roles:list")),
+    ADD_ROLE("/api/v1/role/add", "POST", Collections.singletonList("iam:roles:add"));
 
     private final String endpoint;
     private final String method;
