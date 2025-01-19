@@ -8,6 +8,7 @@ import global.kajisaab.core.exceptionHandling.UnauthorizedException;
 import global.kajisaab.core.jwtService.JwtService;
 import global.kajisaab.core.multitenancy.TenantContext;
 import global.kajisaab.core.permissionMiddleware.PermissionMiddleware;
+import global.kajisaab.core.redis.RedisCacheService;
 import global.kajisaab.feature.auth.entity.UserDetailsEntity;
 import global.kajisaab.feature.auth.repository.UserDetailsRepository;
 import io.micronaut.core.annotation.NonNull;
@@ -34,11 +35,14 @@ class CustomAuthenticationProvider<B> implements TokenValidator<B> {
 
     private final UserDetailsRepository userDetailsRepository;
 
+    private final RedisCacheService redisCacheService;
+
     @Inject
-    CustomAuthenticationProvider(JwtService jwtService, PermissionMiddleware permissionMiddleware, UserDetailsRepository userDetailsRepository) {
+    CustomAuthenticationProvider(JwtService jwtService, PermissionMiddleware permissionMiddleware, UserDetailsRepository userDetailsRepository, RedisCacheService redisCacheService) {
         this.jwtService = jwtService;
         this.permissionMiddleware = permissionMiddleware;
         this.userDetailsRepository = userDetailsRepository;
+        this.redisCacheService = redisCacheService;
     }
 
     @Override
@@ -91,6 +95,7 @@ class CustomAuthenticationProvider<B> implements TokenValidator<B> {
                 .switchIfEmpty(Mono.error(new UnauthorizedException("User not found")))
                 .flatMap((userDetails) -> {
                     if (DateUtils.isBeforeNow((Long) claims.get("exp"))) {
+                        this.redisCacheService.removeUser(userDetails.getId()); // Remove user from cache
                         return Mono.error(new UnauthorizedException("Refresh Token Expired"));
                     }
                     return Mono.just(prepareAuthenticationResponse(claims, userDetails));

@@ -3,8 +3,10 @@ package global.kajisaab.feature.auth.controller;
 import global.kajisaab.core.responseHandler.ResponseHandler;
 import global.kajisaab.feature.auth.dto.LoginUserCaseRequestDto;
 import global.kajisaab.feature.auth.usecase.LoginUseCase;
+import global.kajisaab.feature.auth.usecase.LogoutUseCase;
 import global.kajisaab.feature.auth.usecase.RefreshTokenUseCase;
 import global.kajisaab.feature.auth.usecase.request.LoginUseCaseRequest;
+import global.kajisaab.feature.auth.usecase.request.LogoutUseCaseRequest;
 import global.kajisaab.feature.auth.usecase.request.RefreshTokenUseCaseRequest;
 import global.kajisaab.feature.auth.usecase.response.LoginUseCaseResponse;
 import io.micronaut.http.HttpResponse;
@@ -24,10 +26,13 @@ public class AuthController {
 
     private final RefreshTokenUseCase refreshTokenUseCase;
 
+    private final LogoutUseCase logoutUseCase;
+
     @Inject
-    public AuthController(LoginUseCase loginUseCase, RefreshTokenUseCase refreshTokenUseCase) {
+    public AuthController(LoginUseCase loginUseCase, RefreshTokenUseCase refreshTokenUseCase, LogoutUseCase logoutUseCase) {
         this.loginUseCase = loginUseCase;
         this.refreshTokenUseCase = refreshTokenUseCase;
+        this.logoutUseCase = logoutUseCase;
     }
 
     @Post("/login")
@@ -43,5 +48,11 @@ public class AuthController {
     @Secured(SecurityRule.IS_AUTHENTICATED)
     public Mono<HttpResponse<?>> getRefreshToken(){
         return this.refreshTokenUseCase.execute(new RefreshTokenUseCaseRequest()).map(ResponseHandler::responseBuilder);
+    }
+
+    @Get("/logout")
+    @Secured(SecurityRule.IS_AUTHENTICATED)
+    public Mono<HttpResponse<?>> logout(){
+        return this.logoutUseCase.execute(new LogoutUseCaseRequest()).map(ResponseHandler::responseBuilder);
     }
 }

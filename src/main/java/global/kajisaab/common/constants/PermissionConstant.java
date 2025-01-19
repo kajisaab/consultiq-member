@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 public enum PermissionConstant {
     LOGIN("/auth/login", "POST", Collections.emptyList()),
+    LOGOUT("/api/v1/auth/logout", "GET", Collections.emptyList()),
     REFRESH_TOKEN("/api/v1/auth/refresh-token", "GET", Collections.emptyList()),
     DASHBOARD_CARD("/api/v1/dashboard/cards", "GET", Collections.singletonList("dashboard")),
     INDIVIDUAL_ROLE_DETAIL("/api/v1/roles/detail/:id", "GET", Collections.singletonList("iam:roles:summary")),

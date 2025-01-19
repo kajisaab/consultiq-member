@@ -3,6 +3,7 @@ package global.kajisaab.feature.auth.usecase;
 import global.kajisaab.core.exceptionHandling.BadRequestException;
 import global.kajisaab.core.exceptionHandling.UnauthorizedException;
 import global.kajisaab.core.jwtService.JwtService;
+import global.kajisaab.core.redis.RedisCacheService;
 import global.kajisaab.core.usecase.UseCase;
 import global.kajisaab.feature.auth.entity.UserDetailsEntity;
 import global.kajisaab.feature.auth.usecase.request.RefreshTokenUseCaseRequest;
@@ -21,9 +22,12 @@ public class RefreshTokenUseCase implements UseCase<RefreshTokenUseCaseRequest, 
 
     private final JwtService jwtService;
 
+    private final RedisCacheService redisCacheService;
+
     @Inject
-    public RefreshTokenUseCase(JwtService jwtService) {
+    public RefreshTokenUseCase(JwtService jwtService, RedisCacheService redisCacheService) {
         this.jwtService = jwtService;
+        this.redisCacheService = redisCacheService;
     }
 
     /**
@@ -52,6 +56,7 @@ public class RefreshTokenUseCase implements UseCase<RefreshTokenUseCaseRequest, 
         String tenantId = (String) authentication.get().getAttributes().get("tenantId");
 
         return Mono.just(userDetails)
+                .doOnNext(res -> this.redisCacheService.updateCacheExpiration(userDetails.getId(), 600))
                 .map(user -> jwtService.generateAccessToken(user, tenantId))
                 .map(RefreshTokenUseCaseResponse::new);
 

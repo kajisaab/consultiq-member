@@ -105,6 +105,11 @@ email:
       starttls-enable: "true"
 # kafka (optional, uncomment and configure if Kafka is required)
 
+redis:
+  uri: redis://localhost:6379
+  ssl: false
+  timeout: 30s
+
 kafka:
   health:
     enabled: false

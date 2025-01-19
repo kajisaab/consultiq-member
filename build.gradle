@@ -46,9 +46,10 @@ dependencies {
     implementation("io.micronaut.data:micronaut-data-r2dbc")
     implementation("org.yaml:snakeyaml")
     implementation("io.micronaut.multitenancy:micronaut-multitenancy")
-    implementation 'org.postgresql:postgresql:42.6.0'
+    implementation 'org.postgresql:postgresql:42.7.2'
     implementation("io.micronaut.grpc:micronaut-grpc-server-runtime")
     implementation("io.micronaut.grpc:micronaut-grpc-client-runtime")
+    implementation("io.micronaut.redis:micronaut-redis-lettuce")
 
 
     // Flyway migration

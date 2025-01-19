@@ -4,6 +4,7 @@ import global.kajisaab.common.dto.LabelValuePair;
 import global.kajisaab.core.SecurityUtils.PasswordHelper;
 import global.kajisaab.core.exceptionHandling.BadRequestException;
 import global.kajisaab.core.jwtService.JwtService;
+import global.kajisaab.core.redis.RedisCacheService;
 import global.kajisaab.core.usecase.UseCase;
 import global.kajisaab.feature.auth.dto.LoginResponseUserDetails;
 import global.kajisaab.feature.auth.dto.LoginResponseUserDetailsBuilder;
@@ -13,6 +14,7 @@ import global.kajisaab.feature.auth.repository.UserDetailsRepository;
 import global.kajisaab.feature.auth.usecase.request.LoginUseCaseRequest;
 import global.kajisaab.feature.auth.usecase.response.LoginUseCaseResponse;
 import global.kajisaab.feature.roles.repository.RolesRepository;
+import io.lettuce.core.api.StatefulRedisConnection;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import reactor.core.publisher.Mono;
@@ -31,12 +33,15 @@ public class LoginUseCase implements UseCase<LoginUseCaseRequest, LoginUseCaseRe
 
     private final JwtService jwtService;
 
+    private final RedisCacheService redisCacheService;
+
     @Inject
-    public LoginUseCase(UserDetailsRepository userDetailsRepository, UserCredentialRepository userCredentialRepository, RolesRepository rolesRepository, JwtService jwtService) {
+    public LoginUseCase(UserDetailsRepository userDetailsRepository, UserCredentialRepository userCredentialRepository, RolesRepository rolesRepository, JwtService jwtService, RedisCacheService redisCacheService) {
         this.userDetailsRepository = userDetailsRepository;
         this.userCredentialRepository = userCredentialRepository;
         this.rolesRepository = rolesRepository;
         this.jwtService = jwtService;
+        this.redisCacheService = redisCacheService;
     }
 
     /**
@@ -50,6 +55,12 @@ public class LoginUseCase implements UseCase<LoginUseCaseRequest, LoginUseCaseRe
     public Mono<LoginUseCaseResponse> execute(LoginUseCaseRequest request) {
         return findUserByEmail(request.email())
                 .flatMap(userDetails -> validateUserAndPassword(userDetails, request.password()))
+                .doOnNext(userDetails -> {
+                    if(this.redisCacheService.isUserCached(userDetails.getId())){
+                        throw new BadRequestException("User is already logged in");
+                    }
+                    this.redisCacheService.cacheUser(userDetails.getId(), 600);
+                })
                 .flatMap(userDetails -> generateTokensAndPermissions(userDetails, request.consultancyCode()));
     }
 
@@ -60,6 +71,7 @@ public class LoginUseCase implements UseCase<LoginUseCaseRequest, LoginUseCaseRe
      * @return A Mono containing the user details if found.
      */
     private Mono<UserDetailsEntity> findUserByEmail(String email) {
+
         return userDetailsRepository.findByEmail(email)
                 .switchIfEmpty(Mono.error(new BadRequestException("Cannot find the user with " + email + " email")));
     }
