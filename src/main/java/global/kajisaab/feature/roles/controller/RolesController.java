@@ -4,16 +4,9 @@ import global.kajisaab.common.dto.GlobalTableListFilterPageableRequest;
 import global.kajisaab.common.dto.GlobalTableListFilterPageableResponse;
 import global.kajisaab.core.responseHandler.ResponseHandler;
 import global.kajisaab.feature.roles.dto.RolesTableListDto;
-import global.kajisaab.feature.roles.usecase.AddRoleUseCase;
-import global.kajisaab.feature.roles.usecase.GetIndividualRoleDetailUseCase;
-import global.kajisaab.feature.roles.usecase.GetPermissionUIUseCase;
-import global.kajisaab.feature.roles.usecase.GetTableRolesListUseCase;
-import global.kajisaab.feature.roles.usecase.request.AddRoleUseCaseRequest;
-import global.kajisaab.feature.roles.usecase.request.GetIndividualRoleDetailUseCaseRequest;
-import global.kajisaab.feature.roles.usecase.request.GetPermissionUIUseCaseRequest;
-import global.kajisaab.feature.roles.usecase.response.AddRoleUseCaseResponse;
-import global.kajisaab.feature.roles.usecase.response.GetIndividualRoleDetailUseCaseResponse;
-import global.kajisaab.feature.roles.usecase.response.GetPermissionUIUseCaseResponse;
+import global.kajisaab.feature.roles.usecase.*;
+import global.kajisaab.feature.roles.usecase.request.*;
+import global.kajisaab.feature.roles.usecase.response.*;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.annotation.*;
 import io.micronaut.security.annotation.Secured;
@@ -37,15 +30,21 @@ public class RolesController {
 
     private final GetPermissionUIUseCase getPermissionUIUseCase;
 
+    private final UpdateRoleUseCase updateRoleUseCase;
+
+    private final DeleteRoleUseCase deleteRoleUseCase;
+
     private final SecurityService securityService;
 
     private final AddRoleUseCase addRoleUseCase;
 
     @Inject
-    public RolesController(GetTableRolesListUseCase getTableRolesListUseCase, GetIndividualRoleDetailUseCase getIndividualRoleDetailUseCase, GetPermissionUIUseCase getPermissionUIUseCase, SecurityService securityService, AddRoleUseCase addRoleUseCase) {
+    public RolesController(GetTableRolesListUseCase getTableRolesListUseCase, GetIndividualRoleDetailUseCase getIndividualRoleDetailUseCase, GetPermissionUIUseCase getPermissionUIUseCase, UpdateRoleUseCase updateRoleUseCase, DeleteRoleUseCase deleteRoleUseCase, SecurityService securityService, AddRoleUseCase addRoleUseCase) {
         this.getTableRolesListUseCase = getTableRolesListUseCase;
         this.getIndividualRoleDetailUseCase = getIndividualRoleDetailUseCase;
         this.getPermissionUIUseCase = getPermissionUIUseCase;
+        this.updateRoleUseCase = updateRoleUseCase;
+        this.deleteRoleUseCase = deleteRoleUseCase;
         this.securityService = securityService;
         this.addRoleUseCase = addRoleUseCase;
     }
@@ -80,6 +79,20 @@ public class RolesController {
     @Secured(SecurityRule.IS_AUTHENTICATED)
     public Mono<HttpResponse<AddRoleUseCaseResponse>> createRole(@Valid @Body()AddRoleUseCaseRequest request){
         return this.addRoleUseCase.execute(request).map(ResponseHandler::responseBuilder);
+    }
+
+    @Post("/update/{id}")
+    @Secured(SecurityRule.IS_AUTHENTICATED)
+    public Mono<HttpResponse<UpdateRoleUseCaseResponse>> updateRole(@PathVariable("id") String id, @Valid @Body() AddRoleUseCaseRequest request){
+        UpdateRoleUseCaseRequest requestBody = new UpdateRoleUseCaseRequest(id, request.name(), request.permissions());
+        return this.updateRoleUseCase.execute(requestBody).map(ResponseHandler::responseBuilder);
+    }
+
+    @Get("/delete-role/{id}")
+    @Secured(SecurityRule.IS_AUTHENTICATED)
+    public Mono<HttpResponse<DeleteRoleUseCaseResponse>> deleteRole(@PathVariable("id") String id){
+        DeleteRoleUseCaseRequest request = new DeleteRoleUseCaseRequest(id);
+        return this.deleteRoleUseCase.execute(request).map(ResponseHandler::responseBuilder);
     }
 
 }

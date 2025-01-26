@@ -8,10 +8,12 @@ import global.kajisaab.feature.roles.repository.RolesRepository;
 import global.kajisaab.feature.roles.usecase.request.GetIndividualRoleDetailUseCaseRequest;
 import global.kajisaab.feature.roles.usecase.response.GetIndividualRoleDetailUseCaseResponse;
 import jakarta.inject.Inject;
+import jakarta.inject.Singleton;
 import reactor.core.publisher.Mono;
 
 import java.util.Objects;
 
+@Singleton
 public class GetIndividualRoleDetailUseCase implements UseCase<GetIndividualRoleDetailUseCaseRequest, GetIndividualRoleDetailUseCaseResponse> {
 
     private final RolesRepository rolesRepository;
